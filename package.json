@@ -1,0 +1,16 @@
+{
+  "name": "support-kb",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-static": "latest",
+    "@sveltejs/kit": "latest",
+    "@sveltejs/vite-plugin-svelte": "latest",
+    "mdsvex": "latest",
+    "svelte": "latest",
+    "vite": "latest"
+  }
+}

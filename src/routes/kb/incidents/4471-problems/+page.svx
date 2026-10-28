@@ -1,0 +1,31 @@
+---
+layout: runbook
+title: 'What #4471 shows'
+owner: Kamil Giza
+status: open
+reviewed: 2026-10-28
+signature: Kamil Giza
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+
+  // Frontmatter carries the same signature. The stamp reads this binding.
+  const signature = 'Kamil Giza';
+</script>
+
+Ticket #4471 merged every date report into one known issue. The shared parser reads a date month first, and a day-first tenant writes the day first. That cause is real. The same ticket also holds a second cause.
+
+A report's cause comes from its tenant (the locale, and which booking form they run) and from the channel it arrived on. The intake tag is a guess made from the browser. Subject lines are what the desk merged on, and two reports can share a subject with different causes.
+
+<CauseTable ticket={4471} />
+
+<Callout kind="warn">
+The row that is not this ticket has no ticket of its own. On booking-v3 the date field is labelled MM/DD/YYYY. A day-first tenant's people follow that hint and type the month first, and the form then reads the date the tenant's way. App and email from those same tenants still go through the shared parser.
+</Callout>
+
+Where the desk read a report as a one-day move, that reading stays in the count of the cause the tenant files it under. The table footnotes those reports.
+
+<RenderStamp {signature} />
