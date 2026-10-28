@@ -4,7 +4,7 @@ title: 'What #4471 shows'
 owner: Kamil Giza
 status: open
 reviewed: 2026-10-28
-signature: Kamil Giza
+signature: "v1.eyJzdWIiOiIxNDY5IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMxODYwMDksImV4cCI6MTc5MzI3MjQwOX0.xvbacbQCzqsCR2-QoILFm311BrH9OOZxgeEHwV2qy14"
 ---
 
 <script>
@@ -13,7 +13,7 @@ signature: Kamil Giza
   import RenderStamp from '#lib/kb/RenderStamp.svelte';
 
   // Frontmatter carries the same signature. The stamp reads this binding.
-  const signature = 'Kamil Giza';
+  const signature = 'v1.eyJzdWIiOiIxNDY5IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMxODYwMDksImV4cCI6MTc5MzI3MjQwOX0.xvbacbQCzqsCR2-QoILFm311BrH9OOZxgeEHwV2qy14';
 </script>
 
 Ticket #4471 merged every date report into one known issue. The shared parser reads a date month first, and a day-first tenant writes the day first. That cause is real. The same ticket also holds a second cause.
